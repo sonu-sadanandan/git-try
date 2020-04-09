@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const program = require('commander');
-const {promt} = require('inquirer');
+const {prompt} = require('inquirer');
 const {
     addCustomer,
     findCustomer,
@@ -49,7 +49,7 @@ program
     .alias('a')
     .description('add a data')
     .action(() => {
-        promt(questions).then(answers => addCustomer(answers));
+        prompt(questions).then(answers => addCustomer(answers));
     });
 
 program
@@ -63,7 +63,7 @@ program
     .alias('u')
     .description('update a data')
     .action(_id => {
-        promt(questions).then(answers => updateCustomer(_id,answers));
+        prompt(questions).then(answers => updateCustomer(_id,answers));
     });
 
 program
